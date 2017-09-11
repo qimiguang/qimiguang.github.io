@@ -18,9 +18,11 @@ tags:
 分类问题不可以用Linear Regression（线性回归算法）来解决，需要用Logistic Regression（逻辑回归算法）。逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
 我们先来考虑2个输出值的情况，h(x)的的输出表示结果为1的可能性：
 ![](/assets/images/ml/hxtoy.jpeg)
+![](/assets/images/ml/week3-hx.jpeg)
 ![](/assets/images/ml/Logistic-Function.jpg)
 
-
+多个输出值时：
+![](/assets/images/ml/week3-hx-n.jpeg)
 ## Decision Boundary
 可以看到，当θ' * X = 0时（即h(x) = 0.5），这条线被称为Decision Boundary（决策边界），用于区分y = 0 & y = 1：
 ![decision boundary of logistic function](/assets/images/ml/week3-decision-boundary.jpg)
