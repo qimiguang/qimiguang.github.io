@@ -21,8 +21,6 @@ tags:
 
 ![](/assets/images/ml/Logistic-Function.jpg)
 
-![](/assets/images/ml/week3-hx.jpg)
-
 可以看到，当theta' * X = 0时（即h(x) = 0.5），这条线被称为Decision Boundary（决策边界），用于区分y = 0 & y = 1：
 ![decision boundary of logistic function](/assets/images/ml/week3-decision-boundary.jpg)
 
