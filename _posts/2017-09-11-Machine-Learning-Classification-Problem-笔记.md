@@ -36,7 +36,7 @@ tags:
 
 ## Overfitting
 我们先通过一个线性回归的例子讨论下 overfitting 的定义及解决方案。下图中从左到右分别表示underfitting(欠拟合／高偏差) & fitting(拟合) & overfitting(过度拟合)。
-![](/assets/images/ml/fit.jpeg)
+![](/assets/images/ml/week3-fit.jpeg)
 过度拟合：预测模型 h(x) 过度匹配 training data，导致曲线十分扭曲，当预测新数据时，效果很差。一般来说，features过多 / 多项式的次数过大，都可能造成 overfitting。
 
 通常来说，解决过度拟合有两种方法：
