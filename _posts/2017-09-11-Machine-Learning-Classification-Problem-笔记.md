@@ -9,7 +9,7 @@ tags:
 
 本周主要介绍逻辑回归的问题
 
-## Classification problem 简介
+## Classification Problem 简介
 有监督学习中分为两类问题：regression problem & classification problem。上周聊过了 regression problem，这周来总结下 classification problem。
 所谓 Classification Problem（分类问题），与Regression Problem的不同是，它的output是有限个数的、离散的值,这里的有限个数不局限在｛0，1｝两个值，是**可数**范围内的多个，如：
 - email 是否为垃圾邮件
@@ -18,11 +18,11 @@ tags:
 分类问题不可以用Linear Regression（线性回归算法）来解决，需要用Logistic Regression（逻辑回归算法）。逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
 我们先来考虑2个输出值的情况，h(x)的的输出表示结果为1的可能性：
 ![](/assets/images/ml/hxtoy.jpeg)
-
 ![](/assets/images/ml/Logistic-Function.jpg)
 
-## Decision boundary
-可以看到，当theta' * X = 0时（即h(x) = 0.5），这条线被称为Decision Boundary（决策边界），用于区分y = 0 & y = 1：
+
+## Decision Boundary
+可以看到，当θ' * X = 0时（即h(x) = 0.5），这条线被称为Decision Boundary（决策边界），用于区分y = 0 & y = 1：
 ![decision boundary of logistic function](/assets/images/ml/week3-decision-boundary.jpg)
 
 ## Cost function for Logistic function
@@ -37,4 +37,11 @@ tags:
 
 总的cost function如下图：
 ![](/assets/images/ml/week3-cost-function3.jpeg)
+
+## Gradient Descent
+使用梯度递减求解逻辑回归的cost function最小值的做法和线性回归的一样，皆为：
+![](/assets/images/ml/week3-gradient-descent.jpeg)
+
+由于梯度递减在某些情况下速度较慢，一些"Conjugate gradient", "BFGS", and "L-BFGS" 能更快速的求解出θ值 
+
 
