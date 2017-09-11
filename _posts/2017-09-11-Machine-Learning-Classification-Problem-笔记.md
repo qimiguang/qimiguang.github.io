@@ -16,8 +16,11 @@ tags:
 - 肿瘤是良性／恶性
 
 分类问题不可以用Linear Regression（线性回归算法）来解决，需要用Logistic Regression（逻辑回归算法）。逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
-我们先来考虑2个输出值的情况，h(x)的的输出表示：结果为1的可能性。当h(x) >= 0.5时，则预测y = 1，当h(x) < 0.5时，预测y = 0：
+我们先来考虑2个输出值的情况，h(x)的的输出表示：结果为1的可能性：
 ![](/assets/images/hxtoy.jpeg)
+
 ![](/assets/images/Logistic-Function.jpg)
-![](/assets/images/hx-probability.jpg)
+
+![](/assets/images/week3-hx.jpg)
 可以看到，当theta' * X >= 0时，h(x) >= 0.5，theta' * X = 0的这条线，也称为Decision Boundary（决策边界）
+![](/assets/images/.jpg)
