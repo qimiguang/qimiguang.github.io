@@ -59,10 +59,10 @@ Regularization 后的cost function为下图，为了让cost function接近0，�
 
 ### gradient descent for regularized linear regression
 由于θ0不需要处罚，所以对它进行特殊处理：
-![](week3-linearR-dradient-descent.jpeg)
+![](/assets/images/ml/week3-linearR-dradient-descent.jpeg)
 
 ### normal equation for linear regression cost function
-![](week3-linearR-normalEquation.jpeg)
+![](/assets/images/ml/week3-linearR-normalEquation.jpeg)
 
 ## Logistic Regression 的正则化成本函数和梯度递减算法
 
