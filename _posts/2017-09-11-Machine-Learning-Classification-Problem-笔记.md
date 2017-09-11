@@ -28,11 +28,13 @@ tags:
 ## Cost function for Logistic function
 之前介绍过的线性回归的cost function的如下：
 ![linear regression cost function](/assets/images/ml/week2-linear-reg-cost-function.jpg)
-当逻辑回归套用线性回归的cost function时，cost funtion会呈现出波浪形的图形，存在大量的local optima。为解决这个问题，逻辑回归的cost function做了调整。
+当逻辑回归套用线性回归的cost function时，cost funtion会呈现出波浪形的形状，存在大量的local optima。为解决这个问题，逻辑回归对cost function做了调整。
+
 单个training data的cost function为：
 ![](/assets/images/ml/week3-cost-function.jpg)
 单个training data的cost function合并后为下图：
-![](/assets/images/ml/week3-cost-function2.jpeg)
+![](/assets/images/ml/week3-cost-function2.jpg)
+
 总的cost function如下图：
 ![](/assets/images/ml/week3-cost-function3.jpeg)
 
