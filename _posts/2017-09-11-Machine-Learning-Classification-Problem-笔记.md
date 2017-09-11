@@ -9,7 +9,7 @@ tags:
 
 本周主要介绍Logistic Regression（逻辑回归）的问题
 
-## Classification Problem 简介
+## Classification Problem
 有监督学习中分为两类问题：regression problem & classification problem。上周聊过了 regression problem，这周来总结下 classification problem。
 ![](/assets/images/ml/Supervised-learning.jpeg)
 
@@ -17,6 +17,7 @@ tags:
 - email 是否为垃圾邮件
 - 肿瘤是良性／恶性
 
+## Logistic Regression
 分类问题不可以用Linear Regression（线性回归算法）来解决，需要用Logistic Regression（逻辑回归算法，名称中的regression是由于历史原因导致的，请无视）。
 
 逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
