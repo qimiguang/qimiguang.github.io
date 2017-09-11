@@ -7,7 +7,7 @@ tags:
 - Machine Learning
 ---
 
-本周主要介绍Logistic Regression（逻辑回归）的问题
+本周主要介绍 Classification Problem 以及 Logistic Regression（逻辑回归）的知识。
 
 ## Classification Problem
 有监督学习中分为两类问题：regression problem（回归问题）& classification problem（分类问题）。上周聊过了 regression problem，这周来总结下 classification problem。
@@ -55,7 +55,8 @@ Classification Problem 不可以用 Linear Regression（线性回归算法）来
 ### cost function for linear regression cost function
 Regularization 后的cost function为下图，为了让cost function接近0，必须得降低θ1 ~ θn的值，最终达到减少overfitting的目的:
 ![](/assets/images/ml/week3-cost-function4.jpeg)
-其中 **λ** 称为regularization parameter，该参数既不能过大（导致underfitting），也不能过小（overfitting），具体如何选择，之后我们在介绍。
+
+其中 **λ** 称为 regularization parameter，该参数既不能过大（导致underfitting），也不能过小（overfitting），具体如何选择，之后我们在介绍。
 
 ### gradient descent for regularized linear regression
 由于θ0不需要处罚，所以对它进行特殊处理：
