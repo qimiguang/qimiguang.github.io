@@ -10,7 +10,7 @@ tags:
 本周主要介绍Logistic Regression（逻辑回归）的问题
 
 ## Classification Problem
-有监督学习中分为两类问题：regression problem & classification problem。上周聊过了 regression problem，这周来总结下 classification problem。
+有监督学习中分为两类问题：regression problem（回归问题）& classification problem（分类问题）。上周聊过了 regression problem，这周来总结下 classification problem。
 ![](/assets/images/ml/Supervised-learning.jpeg)
 
 所谓 Classification Problem（分类问题），与Regression Problem的不同是，它的output是有限个数的、离散的值,这里的有限个数不局限在｛0，1｝两个值，是**可数**范围内的多个，如：
@@ -18,7 +18,7 @@ tags:
 - 肿瘤是良性／恶性
 
 ## Logistic Regression
-分类问题不可以用Linear Regression（线性回归算法）来解决，需要用Logistic Regression（逻辑回归算法，名称中的regression是由于历史原因导致的，请无视）。
+Classification Problem 不可以用 Linear Regression（线性回归算法）来解决，需要用 Logistic Regression（逻辑回归算法，名称中的regression是由于历史原因导致的，请无视）。
 
 逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
 
@@ -50,7 +50,7 @@ tags:
 ## Linear Regression 的正则化成本函数和梯度递减算法
 
 ### cost function
-![](/assets/images/ml/week2-linear-reg-cost-function.jpeg)
+![](/assets/images/ml/week2-linear-reg-cost-function.jpg)
 
 ### cost function for linear regression cost function
 Regularization 后的cost function为下图，为了让cost function接近0，必须得降低θ1 ~ θn的值，最终达到减少overfitting的目的:
