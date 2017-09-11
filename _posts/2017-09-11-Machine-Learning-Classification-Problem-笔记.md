@@ -21,12 +21,13 @@ tags:
 
 ![](/assets/images/ml/Logistic-Function.jpg)
 
+## Decision boundary
 可以看到，当theta' * X = 0时（即h(x) = 0.5），这条线被称为Decision Boundary（决策边界），用于区分y = 0 & y = 1：
 ![decision boundary of logistic function](/assets/images/ml/week3-decision-boundary.jpg)
 
 ## Cost function for Logistic function
 之前介绍过的线性回归的cost function的如下：
-![linear regression cost function](ml-week2-linear-reg-cost-function.jpg)
+![linear regression cost function](/assets/images/ml/week2-linear-reg-cost-function.jpg)
 当逻辑回归套用线性回归的cost function时，cost funtion会呈现出波浪形的图形，存在大量的local optima。为解决这个问题，逻辑回归的cost function做了调整。
 单个training data的cost function为：
 ![](/assets/images/ml/week3-cost-function.jpg)
