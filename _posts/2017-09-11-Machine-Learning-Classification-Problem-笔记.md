@@ -10,7 +10,7 @@ tags:
 本周主要介绍 Classification Problem 以及 Logistic Regression（逻辑回归）的知识。
 
 ## Classification Problem
-有监督学习中分为两类问题：regression problem（回归问题）& classification problem（分类问题）。上周聊过了 regression problem，这周来总结下 classification problem。
+有监督学习分为两类问题：regression problem（回归问题）& classification problem（分类问题）。上周聊过了 regression problem，这周来总结下 classification problem。
 ![](/assets/images/ml/Supervised-learning.jpeg)
 
 所谓 Classification Problem（分类问题），与Regression Problem的不同是，它的output是有限个数的、离散的值,这里的有限个数不局限在｛0，1｝两个值，是**可数**范围内的多个，如：
