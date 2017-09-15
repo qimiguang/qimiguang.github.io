@@ -22,7 +22,7 @@ Classification Problem 不可以用 Linear Regression（线性回归算法）来
 
 逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
 
-当输出值是**2个**时，h(x)的的输出表示结果为1的可能性：
+当输出值是**2个**时，h(x)的的输出表示结果为1的可能性，当h(x) >= 0.5,则预测y = 1，否则y ＝ 0：
 ![](/assets/images/ml/hxtoy.jpeg)
 ![](/assets/images/ml/week3-hx.jpeg)
 ![](/assets/images/ml/Logistic-Function.jpg)
