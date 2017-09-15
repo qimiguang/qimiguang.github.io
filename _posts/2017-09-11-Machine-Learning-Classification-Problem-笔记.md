@@ -1,5 +1,5 @@
 ---
-title: Machine-Learning-Classification Problem 总结
+title: Machine Learning Classification Problem 总结
 date: 2017-09-11 10:30:04
 categories:
 - Machine Learning
