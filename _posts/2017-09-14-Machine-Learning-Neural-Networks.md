@@ -26,8 +26,8 @@ tags:
 
 
 ## Multi-class Classification
-上周提到两个输出值的分类器。当 y = 1 if h(x) > = 0.5, y = 0 if h(x) < 0.5。
-在多类别分类问题中，实际上是求解一对多神经网络算法。我们需要对每一种类别训练 classifier。当训练某个单独 classifier 时，将等于当前类别的 y 设置为 1，所有不等于当前类别的全部设置为 0。
+上周提到 Binary Classification（两个输出值的分类器）。当 y = 1 if h(x) > = 0.5, y = 0 if h(x) < 0.5。
+在 Multi-class Classification（多类别分类器）问题中，实际上是求解一对多神经网络算法。我们需要对每一种类别训练 classifier。当训练某个单独 classifier 时，将等于当前类别的 y 设置为 1，所有不等于当前类别的全部设置为 0。
 
 ![](/assets/images/ml/week4-multi-out-nn.jpeg)
 
