@@ -1,5 +1,5 @@
 ---
-title: Machine Learning Neural Network入门
+title: Machine Learning Neural Network 简介
 date: 2017-09-14 22:10:00
 categories:
 - Machine Learning
@@ -20,7 +20,7 @@ tags:
 ## Neural Network
 神经网络是模仿人类大脑中的神经元网络的工作原理。神经元（neuron）包含 cell body、input wires(树突，dendrite)、output wires(轴突，axon)，信息在多个神经元之间的传递构成了整个通信网络。
 
-神经网络首先分层，信息从一层经过**计算**后传递到下一层，直到最终输出层。每一层中的每个元素叫做 unit。
+神经网络首先分层(Layer)，信息从一层经过**计算**后传递到下一层，直到最终输出层。每一层中的每个元素叫做 unit。
 ![](/assets/images/ml/week4-nn.jpeg)
 ![](/assets/images/ml/week4-Q.jpeg)
 
