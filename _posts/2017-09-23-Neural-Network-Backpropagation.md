@@ -1,5 +1,5 @@
 ---
-title: Neural Network Backpropagation 入门
+title: Neural Network Back Propagation 入门
 date: 2017-09-23 17:20:00
 categories:
 - Machine Learning
@@ -17,3 +17,8 @@ tags:
 
 
 ![](/assets/images/ml/week5/forward-propagation.jpeg)
+
+## back propagation
+现在我们有了 cost function，接下来需要求解 cost function 的导数，今天介绍一种新方法：back propagation。
+
+
