@@ -52,4 +52,4 @@ tags:
 ![](/assets/images/ml/week5/complete-process.jpeg)
 ![](/assets/images/ml/week5/complete-process2.jpeg)
 
-可以看出，所谓的 back propagation，本质就是求解 cost function 偏导数的值。当给定一个初始的 theta 时，算出梯度下降的正确方向，能让 theta 朝正确的方向移动（cost function 随着 iterator 递减），直至找出 local optima。
+可以看出，所谓的 back propagation，本质就是给定初始的 theta ，求解 cost function 偏导数的值。之后利用梯度下降算法（或者更高级的 BFGS算法等），让 theta 朝正确的方向移动（cost function 随着 iterator 递减），直至找出 local optima。
