@@ -27,6 +27,29 @@ tags:
 ![](/assets/images/ml/week5/delta.jpeg)
 
 ## back propgation algorithm
+最后将各个模块组合后的 cost function 对theta 的导数如下图：
 ![](/assets/images/ml/week5/back-propagation-algorithm.jpeg)
 详情可参考：[](https://www.coursera.org/learn/machine-learning/supplement/pjdBA/backpropagation-algorithm)
 
+## gradient checking
+由于 back propagation 非常复杂，为了在求解的过程中检验代码的正确性，提出了一种 gradient checking （梯度检验）的方法。
+梯度检验的原理在于，(theta + epsilon) 与(theta - epsilon) 在 y 函数上的连线的斜率近似于函数在 theta 处的导数。
+![](/assets/images/ml/week5/theta-epsilon.jpeg)
+![](/assets/images/ml/week5/theta-epsilon2.jpeg)
+用代码来表示：
+![](/assets/images/ml/week5/epsilon.jpeg)
+
+但是由于求解 gradient checking 非常的慢，所以一般在开始运行 back propagation 时，测试 back propagation 的输出与 gradient checking 的输出是否近似，判断无误后，表明 back propagation 已经在正确运行，其实应该停掉 gradient checking，只运行 back propagation，保证效率。
+
+## putting it together
+至于如何选择 hidden layer 的层数以及每层的 unit 数，遵循以下建议：
+* 默认使用单个 hidden layer
+* 如果使用多个 hidden layer 的话，一般每层的 unit 数保持一致
+* 一般来说，unit 越多越好（当然计算量越大）
+* 一般来说，unit 取稍大于 input feature 的个数
+
+
+![](/assets/images/ml/week5/complete-process.jpeg)
+![](/assets/images/ml/week5/complete-process2.jpeg)
+
+所以可以看出，所谓的 back propagation，其实就是换了一种思路求解 cost function 的导数，这样当给定一个随机的 theta 的初始值时，能让 theta 朝正确的方向移动（cost function 随着 iterator 递减）。
