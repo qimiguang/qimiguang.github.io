@@ -59,7 +59,7 @@ Regularization 后的cost function为下图，为了让cost function接近0，�
 其中 **λ** 称为 regularization parameter，该参数既不能过大（导致underfitting），也不能过小（overfitting），具体如何选择，之后我们在介绍。
 
 ### gradient descent for regularized linear regression
-由于θ0不需要处罚，所以对它进行特殊处理：
+由于θ0不需要处罚，所以对它进行特殊处理，其中 alpha 为学习速率参数：
 ![](/assets/images/ml/week3-linearR-dradient-descent.jpeg)
 
 ### normal equation for linear regression cost function
