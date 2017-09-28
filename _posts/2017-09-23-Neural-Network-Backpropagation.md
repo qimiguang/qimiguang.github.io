@@ -13,7 +13,7 @@ tags:
 ## neural network cost function
 当 neural network 的 output layer 有k (>2)个输出值时，h(x) 不再是一个 real number，而是一个 k 维向量，对应的 cost function 如下：
 ![](/assets/images/ml/week5/cost-function.jpeg)
-其中正则化表达式中的 theta，包含本层的偏置单元（bias units），但不包含下层的。
+> 注意：theta本身包含 theta0, 在正则化表达式中的 theta 应去除 theta0。
 
 
 ![](/assets/images/ml/week5/forward-propagation.jpeg)
@@ -42,7 +42,10 @@ tags:
 但是由于求解 gradient checking 非常的慢，所以一般在开始运行 back propagation 时，测试 back propagation 的输出与 gradient checking 的输出是否近似，判断无误后，表明 back propagation 已经在正确运行，其实应该停掉 gradient checking，只运行 back propagation，保证效率。
 
 ## putting it together
+
 至于如何选择 hidden layer 的层数以及每层的 unit 数，遵循以下建议：
+* theta 的初始值，一般来说，有两种选择。1：选取[-ε, ε], ε = 0.12 * 0.12；2：
+![](/assets/images/ml/week5/theta-choose.jpeg)
 * 默认使用单个 hidden layer
 * 如果使用多个 hidden layer 的话，一般每层的 unit 数保持一致
 * 一般来说，unit 越多越好（当然计算量越大）
