@@ -22,9 +22,12 @@ tags:
 现在我们有了 cost function，接下来需要求解 cost function 的导数，今天介绍一种新方法：back propagation。
 在介绍 back propagation 前，先来介绍一个新的概念 **delta**: "error" of node j in layer。对于输出层来说，delta ＝ a - y. (a: h(x), y: actual output)
 ![](/assets/images/ml/week5/deltaL.jpeg)
+![](/assets/images/ml/wekk5/delta_2.jpeg)
 
 所谓向后传播，即在求解 delta 时，先求解最后一层（输出层）的 delta，然后以此 back propagation 求解每一层的 delta:
 ![](/assets/images/ml/week5/delta.jpeg)
+需要注意，这里最后的公式其实是 g(z) 对 z 的偏导数：
+![](/assets/images/ml/week5/gz.jpep)
 
 ## back propgation algorithm
 最后将各个模块组合后的 cost function 对theta 的导数如下图：
