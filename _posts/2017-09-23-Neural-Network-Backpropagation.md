@@ -44,8 +44,9 @@ tags:
 ## putting it together
 
 至于如何选择 hidden layer 的层数以及每层的 unit 数，遵循以下建议：
-* theta 的初始值，一般来说，有两种选择。1：选取[-ε, ε], ε = 0.12 * 0.12；2：
-![](/assets/images/ml/week5/theta-choose.jpeg)
+* theta 的初始值，一般来说，有两种选择。
+1：选取[-ε, ε], ε = 0.12 * 0.12；
+2：![](/assets/images/ml/week5/theta-choose.jpeg)
 * 默认使用单个 hidden layer
 * 如果使用多个 hidden layer 的话，一般每层的 unit 数保持一致
 * 一般来说，unit 越多越好（当然计算量越大）
