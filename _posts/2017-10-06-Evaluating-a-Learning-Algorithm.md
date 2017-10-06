@@ -15,7 +15,9 @@ tags:
 首先将数据集分成三部分：training set \ cross validation set \ test set。三者的比例一般是 60% : 20% : 20%。
 
 # Bias vs Variance
-在之前的帖子中我们谈到过 bias & variance。bias or variance 是算法质量较差的不同极端，其中 high bias（高偏差）是指 underfit，而 high variance（高方差）是指 overfit。
+在之前的帖子中我们谈到过 bias & variance。bias or variance 是算法质量较差的不同极端，其中：
+* high bias（高偏差）是指 underfit，training set & test set 的 cost function 都很高。
+* high variance（高方差）是指 overfit，training set 的 cost function 低，test set 的 cost function 很高。
 
 ## Polynomial Degree and Bias / Variance
 不同的算法可以拥有不同的多项式次数，而不同的多项式次数可能导向不同的 bias/variance。
@@ -31,10 +33,11 @@ tags:
 ## Regularization and Bias / Variance
 当多项式的项数较高时，随之而来的是 overfit 现象，为了一定程度上消除 overfit，我们可以引入 regularization (正则化)。正则化中一个重要的参数是 lamda。该参数既不能过大（high bias/ underfit），也不能过小（high variance / overfit）。training set & cross validation set 随 lamda 变化的 cost function 的值的图如下：
 ![](/assets/images/ml/week6/lambda-cost-function.jpeg)
-那么如何选择 lambda 呢（下图中同时进行了 lambda & polynomial degree 的选择）？
+那么如何选择 model(polynomial degree) & lambda ？
 ![](/assets/images/ml/week6/choose-lambda.jpeg)
 
-> 可以看出影响 bias/varinace 的因素有 polynomial degree & lambda。
+> 造成 high bias 的因素可能有 low polynomial degree ／high lambda。	
+> 造成 high variance 的因素可能有 high polynomial degree / low lambda。
 
 # Learning Curves
 Learning Curves 是一个很好的工具来检测当前算法是否处于高偏差、高方差或者两者皆有的情况。
@@ -55,7 +58,7 @@ Learning Curves 是一个很好的工具来检测当前算法是否处于高偏�
 在了解了算法处于哪种问题后（bias / variance），我们可以选择不同的手段去优化：
 ![](/assets/images/ml/week6/method.jpeg)
 
-
+## Diagnosing Neural Networks
 
 
 
