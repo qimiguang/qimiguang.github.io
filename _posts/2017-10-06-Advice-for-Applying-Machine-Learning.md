@@ -1,5 +1,5 @@
 ---
-title: Evaluating a Learning Algorithm
+title: Advice for Applying Machine Learning
 date: 2017-10-06 15:10:00
 categories:
 - Machine Learning
