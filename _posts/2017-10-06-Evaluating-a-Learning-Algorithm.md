@@ -39,17 +39,19 @@ tags:
 > 造成 high bias 的因素可能有 low polynomial degree ／high lambda。	
 > 造成 high variance 的因素可能有 high polynomial degree / low lambda。
 
-# Learning Curves
+## Learning Curves
 Learning Curves 是一个很好的工具来检测当前算法是否处于高偏差、高方差或者两者皆有的情况。
 
 除了 polynomial degree & lamda 影响算法预测的准确性外，数据集大小也是一个重要的因素。
 
 当 training set 很小时，很容易做到 training set 的 cost function 零误差。随着 training set 数据量的增大，training set 的 cost function 值也在增大，而 test set 的 cost function 在逐步下降。但是对于不同的情况（bias / variance），cost function 的变化并不完全一样。
 
-## Experiencing high bias
+### Experiencing high bias
+training set & test set 的 cost function 都超过预期，且增加 training set 对算法的优化帮助不大。
 ![](/assets/images/ml/week6/bias-size.jpeg)
 
-## Experiencing high variance
+### Experiencing high variance
+training set 的 cost function 在预期之内，但是 test set 的超过预期，增加 training set 对算法的优化有帮助。
 ![](/assets/images/ml/week6/variance-size.jpeg)
 
 > 可见，收集更多的数据并不一定会优化算法模型，只有当模型处于 high variance 时才有效。
