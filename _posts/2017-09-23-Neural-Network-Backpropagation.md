@@ -32,7 +32,7 @@ tags:
 ## back propgation algorithm
 最后将各个模块组合后的 cost function 对theta 的导数如下图：
 ![](/assets/images/ml/week5/back-propagation-algorithm.jpeg)
-详情可参考：[](https://www.coursera.org/learn/machine-learning/supplement/pjdBA/backpropagation-algorithm)
+详情可参考：[course by Andrew Ng](https://www.coursera.org/learn/machine-learning/supplement/pjdBA/backpropagation-algorithm)
 
 ## gradient checking
 由于 back propagation 非常复杂，为了在求解的过程中检验代码的正确性，提出了一种 gradient checking （梯度检验）的方法。
