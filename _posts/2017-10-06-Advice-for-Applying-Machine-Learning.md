@@ -64,5 +64,6 @@ training set 的 cost function 在预期之内，但是 test set 的超过预期
 
 
 
-
+# summary
+![](/assets/images/ml/week6/flowchart.jpg)
 
