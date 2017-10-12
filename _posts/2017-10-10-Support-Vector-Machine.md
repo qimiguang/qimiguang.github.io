@@ -46,9 +46,31 @@ SVM 算法的 cost function 为：
 ![](/assets/images/ml/week7/margin.jpeg)
 
 # Kernels
+核函数可以让我们训练一些基于 SVM 的复杂的、非线性的分类器。那么什么是核函数呢？核函数本质是**相似度**函数，即度量两个向量的相似度，使用的比较多的一个核函数是 Gaussian Kernel:
+![](/assets/images/ml/week7/GaussianKernel.jpeg)
+可以看出，当  x ≈ l 时，f ≈ 1。当 x 远离 l 时，f ≈ 0。
 
+那么 kernel 如何与 SVM 结合呢？
+首先我们回顾下 SVM 的 cost function:
+![](/assets/images/ml/week7/svmcf.jpeg)
+![](/assets/images/ml/week7/thetax2.jpeg)
+这里我们不再使用 Θ' * X，而是使用 Θ' * f，f 值是一个 m 维 vector，表明 x 与当前的 m 个训练样本集的 similarity， 具体如下：
+![](/assets/images/ml/week7/fsimilarx.jpeg)
+所以，融合 SVM & Kernel 后的 cost function 如下：
+![](/assets/images/ml/week7/cfsvmkernel.jpeg)
 
+当然，kernel 不仅可以和 SVM 算法结合，也可以和 logistic regression 算法结合，不过**由于 SVM 在cost function 上做的优化，所以 kernel & SVM 运行的效率更高**，也更常用。
+
+# SVM & Kernels parameters optimize
+## C
+
+## λ 
+
+![](/assets/images/ml/week7/)
+![](/assets/images/ml/week7/)
+![](/assets/images/ml/week7/)
 ![](/assets/images/ml/week7/)
 
 # logistic regression
-
+>参考资料：[](https://www.coursera.org/learn/machine-learning/resources/Es9Qo)
+[](http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf)
