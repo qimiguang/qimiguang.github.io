@@ -17,7 +17,7 @@ tags:
 # SVM cost function
 SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**，cost function 不再是一条曲线，而是变成了直线。对于 y = 1 时的 cost function，当θ'x ≥ 1 时，cost function 为0，θ'x ≤ 1时，我们用一条直线替代原先的曲线，同理对于 y = 0时的 cost function，当θ'x ≤ -1时，cost function 为0，否则是一条直线。
  
-## 普通的逻辑回归算法的 cost function
+## 逻辑回归算法的 cost function
 ![](/assets/images/ml/week7/lrcostfunction.jpeg)
 ## SVM 算法的 cost function
 ![](/assets/images/ml/week7/svmcostfunction.jpeg)
@@ -75,6 +75,5 @@ SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**
 ![](/assets/images/ml/week7/)
 ![](/assets/images/ml/week7/)
 
-# logistic regression
 >参考资料：[](https://www.coursera.org/learn/machine-learning/resources/Es9Qo)
 [](http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf)
