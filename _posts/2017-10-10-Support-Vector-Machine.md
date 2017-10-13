@@ -76,5 +76,5 @@ SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**
 ![](/assets/images/ml/week7/)
 
 # 参考资料
-[coursera](https://www.coursera.org/learn/machine-learning/resources/Es9Qo)
-[](http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf)
+[https://www.coursera.org/learn/machine-learning/resources/Es9Qo](https://www.coursera.org/learn/machine-learning/resources/Es9Qo)
+[http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf](http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf)
