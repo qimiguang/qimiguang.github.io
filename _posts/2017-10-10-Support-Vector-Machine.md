@@ -14,11 +14,15 @@ tags:
 对于单个 example 的 cost function 如下：
 ![](/assets/images/ml/week7/1examplecostfunction.jpeg)
 
-这里有点值得注意，在 SVM 算法中，单个 example 的 cost function 从原先的曲线变成了直线，这样可以带来更高的效率.
-普通的逻辑回归算法的 cost function 为：
+# SVM cost function
+SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**，cost function 不再是一条曲线，而是变成了直线。对于 y = 1 时的 cost function，当θ'x ≥ 1 时，cost function 为0，θ'x ≤ 1时，我们用一条直线替代原先的曲线，同理对于 y = 0时的 cost function，当θ'x ≤ -1时，cost function 为0，否则是一条直线。
+ 
+## 普通的逻辑回归算法的 cost function
 ![](/assets/images/ml/week7/lrcostfunction.jpeg)
-SVM 算法的 cost function 为：
+## SVM 算法的 cost function
 ![](/assets/images/ml/week7/svmcostfunction.jpeg)
+
+
 需要注意：
 * 由于 m （example count）是常量，所以在 SVM 中习惯删掉
 * SVM 中单个 example 的 cost function 为 cost1、cost2，即前面提到的两条相交的直线
