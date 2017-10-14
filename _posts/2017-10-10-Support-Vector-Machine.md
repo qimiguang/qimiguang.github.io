@@ -47,12 +47,12 @@ SVM 算法与普通逻辑回归算法的不同在于<span style="color:red"> **c
 为了降低 cost function 的值，左侧的公式可变形为：
 ![](/assets/images/ml/week7/thetax.jpeg)
 
-> 我们反过来看，为了降低 full cost function，右侧的正则化参数不能太大，即** Θ 不能太大**，θ 较小，但是 p . ||Θ|| 又需要大，则 p 只能较大，即** X 映射到 Θ 上的长度较大**，所以 decision boundaries 只能尽可能的原理正负样本集，这也正式 SVM 叫做 Large Margin Classifier 的原因。
+> 我们反过来看，为了降低 full cost function，右侧的正则化参数不能太大，即 **Θ 不能太大**，θ 较小，但是 p . ||Θ|| 又需要大，则 p 只能较大，即 **X 映射到 Θ 上的长度较大**，所以 decision boundaries 只能尽可能的远离正负样本集，这也正式 SVM 叫做 Large Margin Classifier 的原因。
 ![](/assets/images/ml/week7/margin.jpeg)
 
 ---
 # Kernels
-核函数可以让我们训练一些基于 SVM 的复杂的、非线性的分类器。那么什么是核函数呢？核函数本质是**相似度**函数，即度量两个向量的相似度，使用的比较多的一个核函数是 Gaussian Kernel:
+核函数可以让我们训练一些基于 SVM 的复杂的、非线性的分类器。那么什么是核函数呢？核函数本质是**相似度**函数，即度量两个向量的相似度，使用的比较多的一个核函数是 Gaussian Kernel(高斯核函数):
 ![](/assets/images/ml/week7/GaussianKernel.jpeg)
 可以看出，当 x ≈ l 时，f ≈ 1。当 x 远离 l 时，f ≈ 0。
 
@@ -69,7 +69,7 @@ SVM 算法与普通逻辑回归算法的不同在于<span style="color:red"> **c
 
 ---
 # SVM & Kernels parameters optimize
-SVM 中涉及到参数 C 的选择，kernel 涉及到 σ<sup>2</sup>的选择：
+SVM 中涉及到参数<span style="color:red"> C </span>的选择，kernel 涉及到 <span style="color:red">σ<sup>2</sup></span>的选择：
 ![](/assets/images/ml/week7/svm_param_choose.jpeg)
 
 Multi-class classification
