@@ -14,8 +14,8 @@ tags:
 对于单个 example 的 cost function 如下：
 ![](/assets/images/ml/week7/1examplecostfunction.jpeg)
 
-# SVM cost function
-SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**，cost function 不再是一条曲线，而是变成了直线。对于 y = 1 时的 cost function，当θ'x ≥ 1 时，cost function 为0，θ'x ≤ 1时，我们用一条直线替代原先的曲线，同理对于 y = 0时的 cost function，当θ'x ≤ -1时，cost function 为0，否则是一条直线。
+# SVM
+SVM 算法与普通逻辑回归算法的不同在于<span style="color:red"> **cost function 的定义**</span>，cost function 不再是一条曲线，而是变成了直线。对于 y = 1 时的 cost function，当θ'x ≥ 1 时，cost function 为0，θ'x ≤ 1时，我们用一条直线替代原先的曲线，同理对于 y = 0时的 cost function，当θ'x ≤ -1时，cost function 为0，否则是一条直线。
  
 ## 逻辑回归算法的 cost function
 ![](/assets/images/ml/week7/lrcostfunction.jpeg)
@@ -28,6 +28,7 @@ SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**
 * SVM 中单个 example 的 cost function 为 cost1、cost2，即前面提到的两条相交的直线
 * SVM 中 C = 1 / λ
 
+---
 # Large Margin Classifier
 有些人习惯将 SVM 称作 Large Margin Classifier（大间距分类器），为什么这么说呢，因为在普通的逻辑回归算法中，当 y ＝ 1 时，我们仅仅要求 θ'X ≥ 0，当 y ＝ 0 时，要求 θ'X ≤ 0。但是 SVM 要求θ'X ≥ 1 ／θ'X ≤ －1，即更大程度的区分度：
 ![](/assets/images/ml/week7/svmmargin.jpeg)
@@ -49,10 +50,11 @@ SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**
 > 我们反过来看，为了降低 full cost function，右侧的正则化参数不能太大，即** Θ 不能太大**，θ 较小，但是 p . ||Θ|| 又需要大，则 p 只能较大，即** X 映射到 Θ 上的长度较大**，所以 decision boundaries 只能尽可能的原理正负样本集，这也正式 SVM 叫做 Large Margin Classifier 的原因。
 ![](/assets/images/ml/week7/margin.jpeg)
 
+---
 # Kernels
 核函数可以让我们训练一些基于 SVM 的复杂的、非线性的分类器。那么什么是核函数呢？核函数本质是**相似度**函数，即度量两个向量的相似度，使用的比较多的一个核函数是 Gaussian Kernel:
 ![](/assets/images/ml/week7/GaussianKernel.jpeg)
-可以看出，当  x ≈ l 时，f ≈ 1。当 x 远离 l 时，f ≈ 0。
+可以看出，当 x ≈ l 时，f ≈ 1。当 x 远离 l 时，f ≈ 0。
 
 那么 kernel 如何与 SVM 结合呢？
 首先我们回顾下 SVM 的 cost function:
@@ -65,16 +67,29 @@ SVM 算法与普通逻辑回归算法的不同在于 **cost function 的定义**
 
 当然，kernel 不仅可以和 SVM 算法结合，也可以和 logistic regression 算法结合，不过**由于 SVM 在cost function 上做的优化，所以 kernel & SVM 运行的效率更高**，也更常用。
 
+---
 # SVM & Kernels parameters optimize
-## C
+SVM 中涉及到参数 C 的选择，kernel 涉及到 σ<sup>2</sup>的选择：
+![](/assets/images/ml/week7/svm_param_choose.jpeg)
 
-## λ 
+Multi-class classification
+大部分的 SVM packages 已经内置了 multi-class classification function。如果要自己实现，原理其实跟之前提过的类似，如果有 K 种输出，需要训练 K 个 SVM，即训练出 K 个 Θ.
 
-![](/assets/images/ml/week7/)
-![](/assets/images/ml/week7/)
-![](/assets/images/ml/week7/)
-![](/assets/images/ml/week7/)
+---
 
+# Logistic regression vs SVMs vs Neural Network
+ML 算法的选择主要考虑两个点，m(number of training examples) & n(number of features)
+
+* If n is large (relative to m), then use logistic regression, or SVM without a kernel (the "linear kernel")
+* If n is small and m is intermediate, then use SVM with a Gaussian Kernel
+* If n is small and m is large, then manually create/add more features, then use logistic regression or SVM without a kernel.
+
+总结：
+* Neural Network 适用于上述所有场景，但是 Neural Network 有自己的缺点：训练速度慢
+* logistic regression 与 SVM without a kernel 的适用场景是一致的。以及当 m 较大时，SVM with a kernel 性能会很差
+* 但是，对于大多数情况来说，核心的问题仍然在于你有多少 data，多少 features**
+
+---
 # 参考资料
 [https://www.coursera.org/learn/machine-learning/resources/Es9Qo](https://www.coursera.org/learn/machine-learning/resources/Es9Qo)
 
