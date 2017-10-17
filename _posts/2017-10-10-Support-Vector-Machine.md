@@ -87,7 +87,7 @@ ML 算法的选择主要考虑两个点，m(number of training examples) & n(num
 总结：
 * Neural Network 适用于上述所有场景，但是 Neural Network 有自己的缺点：训练速度慢
 * logistic regression 与 SVM without a kernel 的适用场景是一致的。以及当 m 较大时，SVM with a kernel 性能会很差
-* 但是，对于大多数情况来说，核心的问题仍然在于你有多少 data，多少 features**
+* 但是，对于大多数情况来说，核心的问题仍然在于你有多少 data，多少 features
 
 ---
 # 参考资料
