@@ -7,7 +7,7 @@ tags:
 - Machine Learning
 ---
 
-本周主要介绍 Classification Problem 以及 Logistic Regression（逻辑回归）的知识。
+最近在学习 Machine Learning 的知识，一些听 Andrew Ng 的 coursera 课，一边做习题，即使这样，仍感觉听完就糊涂，学完就忘，so，重新捡起中断了一年多的 blog。前期的关于 Linear Problem 的内容我争取尽早补上吧。本周主要介绍 Classification Problem 以及 Logistic Regression（逻辑回归）的知识。
 
 ## Classification Problem
 有监督学习分为两类问题：regression problem（回归问题）& classification problem（分类问题）。上周聊过了 regression problem，这周来总结下 classification problem。

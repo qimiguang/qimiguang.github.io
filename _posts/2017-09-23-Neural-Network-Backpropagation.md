@@ -8,7 +8,7 @@ tags:
 - Neural Network
 ---
 
-上期从总体上聊了下 neural network，本篇 post 将深化学习 neural network。
+上期从总体上聊了下 neural network，本篇 post 将深化学习 neural network。重点聊聊神经网络的 cost function 以及一种高效的算法：back propagation。
 
 ## neural network cost function
 当 neural network 的 output layer 有k (>2)个输出值时，h(x) 不再是一个 real number，而是一个 k 维向量，对应的 cost function 如下：
@@ -60,3 +60,5 @@ tags:
 ![](/assets/images/ml/week5/complete-process2.jpeg)
 
 可以看出，所谓的 back propagation，本质就是给定初始的 theta ，求解 cost function 偏导数的值。之后利用梯度下降算法（或者更高级的 BFGS算法等），让 theta 朝正确的方向移动（cost function 随着 iterator 递减），直至找出 local optima。
+
+

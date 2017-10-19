@@ -8,7 +8,7 @@ tags:
 - Neural Network
 ---
 
-本周主要介绍 Logistic Nonlinear Classification & Neural Network。
+今天我们来聊聊 Logistic Nonlinear Classification，以及一种全新的算法 Neural Network。相信大家已经被 AlphaGo 的新闻狂轰乱炸了，没错，AlphaGo 正是运用了强化学习以及深度神经网络的知识来血洗各路高手的。。。
 
 ![](/assets/images/ml/week4-logistic-classifier.jpeg)
 之前处理 Nonlinear Classifier 时，我们一般通过引入特征的多项式。当特征个数较少时，多项式这种做法还可行。但是许多机器学习问题涉及很多特征（如图片识别： n * m pixel(n * m features)），对众多的特征应用二项式甚至多项式时，会产生极多的项数，造成：
