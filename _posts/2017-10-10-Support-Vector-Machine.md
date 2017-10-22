@@ -1,5 +1,5 @@
 ---
-title: Support Vector Machine 简介
+title: Support Vector Machine
 date: 2017-10-11 23:50:00
 categories:
 - Machine Learning

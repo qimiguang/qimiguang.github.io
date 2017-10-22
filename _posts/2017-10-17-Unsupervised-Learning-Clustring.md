@@ -1,5 +1,5 @@
 ---
-title: Unsupervised Learning
+title: Unsupervised Learning: Clustering
 date: 2017-10-17 23:50:00
 categories:
 - Machine Learning
@@ -8,7 +8,7 @@ tags:
 - Unsupervised Learning
 ---
 
-之前介绍的都是 Supervised Learning（监督学习算法），今天，终于开始学习 Unsupervised Learning 了。unsupervised learning 与 supervised learning 最大的区别在于，它学习所用的数据是**unlabeled training set**（未经过标记的数据），即只有一系列 features，而没有 y 向量做为预期输出。
+之前介绍的都是 Supervised Learning（监督学习算法），今天，终于开始学习 <span style="color:red">Unsupervised Learning</span> 了。unsupervised learning 与 supervised learning 最大的区别在于，它学习所用的数据是 **unlabeled training set**（未经过标记的数据），即只有一系列 features，而没有 y 向量做为预期输出。
 
 今天我们先来学习非监督学习中的第一种情况：<span style="color:red">Clustering（聚类）</span>。所谓聚类，即将一组 input data 分成 n 簇。
 
