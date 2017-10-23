@@ -33,18 +33,18 @@ tags:
 其中 μ 表示均值，而 s 一般用方差来特征缩放。
 
 接下来就是 PCA 的主要步骤了：
-## 1. Compute covariance matrix
+## Compute covariance matrix
 covariance matrix（协方差矩阵），数学符号中用 Σ（sigma）表示，当原始特征是 n 维时，Σ 是 n * n 维向量：
 ![](/assets/images/ml/week8/sigma.jpeg)
 
-## 2. Compute "eigenvectors" of covariance matrix Σ
-接下来要做的是计算 **Sigma 矩阵的特征向量 (eigenvectors)**。我们可以直接调用 svd function or eig function 来实现。
+## Compute "eigenvectors" of covariance matrix Σ
+接下来要做的是计算 **Sigma 矩阵的特征向量 (eigenvectors)**。我们可以直接调用 <span style="color:red">svd function</span> or eig function 来实现。
 
 svd 表示奇异值分解 (singular value decomposition):
 ![](/assets/images/ml/week8/u-matrix.jpeg)
-它输出的 U ∈ ℝ<sup>n*n</sup>
+它输出的 U ∈ ℝ<sup>n*n</sup>，即 principal components, S will contain a diagonal matrix.
 
-## 3. Take the first k columns of the U matrix and compute z
+## Take the first k columns of the U matrix and compute z
 当我们想要将特征从 n 维降到 k 维时，从 U 中取前 k 列， 即一个 n*k 矩阵，并用 U<sub>reduce</sub> 来表示。
 
 我们用 z<sup>(i)</sup> 来表示 x<sup>(i)</sup> 降维后的值，这个值可以通过如下计算得到：
