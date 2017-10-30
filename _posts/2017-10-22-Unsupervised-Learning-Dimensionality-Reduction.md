@@ -21,12 +21,12 @@ tags:
 
 当向量超过 3 维时，我们已经不能很直观的观看数据了。所以，可以通过降维到 3 维以内来 Visualization。
 
-下图是一个将二维特征降维到一维的例子：
+下图是一个将二维降到一维的例子：
 ![](/assets/images/ml/week8/data-compression.jpeg)
 
 <!-- more -->
 # Principal Componet Analysis (PCA)
-目前最常用的降维算法是 <span style="color:red">PCA（主成分分析法）</span>。将一个 n 维特征降维到 k 维时，PCA 的目的是寻找到一个合适的 k 维向量(u<sup>1</sup>、u<sup>2</sup>...u<sup>k</sup>)，使得原始数据的 n 维向量投影到 k 维向量的平均 projection error（投影误差） 最小。
+目前最常用的降维算法是 <span style="color:red">PCA（主成分分析法）</span>。将一个 n 维向量降到 k 维时，PCA 的目的是寻找到一个合适的 k 维向量(u<sup>1</sup>、u<sup>2</sup>...u<sup>k</sup>)，使得原始数据的 n 维向量投影到 k 维向量的平均 projection error（投影误差） 最小。
 
 在执行 PCA 算法前，我们需要先进行 **data preprocessing**。所谓 data preprocessing，即 **mean normalization（均值归一化） & feature scaling（特征缩放）**：
 ![](/assets/images/ml/week8/mean-scale.jpeg)
