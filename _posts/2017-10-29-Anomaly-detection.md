@@ -10,7 +10,7 @@ tags:
 Anomoly Dectection 顾名思义“异常识别”，给定一个 dataset（with features），训练出一种模型，当出现新数据时，判断该数据是否正常。
 首先我们先来简单聊下**高斯分布 Gaussian Distribution**（正态分布 Normal Distribution），我们认为**中间状态是事物的常态，过高和过低都属于少数**。高斯分布的概率密度函数曲线呈钟形，因此人们又经常称之为钟形曲线。高斯分布的概率密度函数为：
 ![](/assets/images/ml/week9/gaosi.jpeg)
-所以识别异常值的过程就变为求解概率的数学问题，当概率值低于某个阈值 ϵ **（p(x) < ϵ）**时，我们把它认为是异常值。
+所以识别异常值的过程就变为求解概率的数学问题，当概率值低于某个阈值 ϵ ，即<span style="color:red"> p(x) < ϵ </span>时，我们把它认为是异常值。
 
 # Anomoly Dectection Original Model
 ## Algorithm
@@ -69,10 +69,7 @@ Use supervised learning when...
 | --- | --- |
 |需要手动创建 feature 捕获特征关系|自动捕捉特征关联关系|
 |计算速度更快|计算速度慢|
-|适合 features 很大的情况||
-|适合 training data 比较小的情况|training data 远远大于 features|
-
-![](/assets/images/ml/week9/)
+|适合 training data 比较小的情况|适合 training data 远远大于 features 的情况|
 
 # 参考资料
 [The Multivariate Gaussian Distribution](http://cs229.stanford.edu/section/gaussians.pdf)
