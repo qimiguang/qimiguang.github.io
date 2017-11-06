@@ -12,8 +12,6 @@ tags:
 
 场景方面，Facebook、LinkedIn 以及一些别的社交网络公司使用协同过滤给用户推荐好友、群组等，Twitter 给用户推荐 follow 人选等，Amazon、Netflix、 Youtube 给用户推荐一些用户可能感兴趣的物品。
 
-[上篇文章](https://qimiguang.github.io/2017/10/18/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8B/)提到，用户行为数据又分显性反馈和隐性反馈。协同过滤对这两种的处理方式也有不同。
-
 具体来说，协同过滤又分为两种类型：Neighborhood-Based CF（基于领域的方法）、Latent Factor Models（隐语义模型）。由于所涉及到的知识点很多，我们先来了解下协同过滤分支的 Neighborhood-Based CF 算法。
 
 基于领域的方法包含 User-based CF（基于用户的协同过滤） & Item-based CF（基于物品的协同过滤）
@@ -51,12 +49,16 @@ tags:
 ## Evolution of the algorithm
 ![](/assets/images/recommender/item-alg.jpg)
 
+### 基础算法
 **图1**为最简单的计算物品相关度的公式，分子为同时喜好 item-i & item-j 的用户数。
 
+### 对热门物品惩罚
 但是图1存在一个问题，如果 item-j 是很热门的商品，导致很多喜欢 item-i 的用户都喜欢 item-j，这时 w<sub>ij</sub> 就会非常大。同样，几乎所有的物品都和 item-j 的相关度非常高，这显然是不合理的。**图2**中分母通过引入 N(j) 来对 item-j 的热度进行惩罚。
 
-如果 item-j 极度热门，上面的算法还是不够的。举个例子，《Harry Potter》非常火，买任何一本书的人都会购买它，即使通过图2的方法对它进行了惩罚，但是《Harry Potter》仍然会获得很高的相似度。这就是推荐系统领域著名的 [Harry Potter Problem](http://nkparimi.blogspot.jp/2010/01/harry-potter-problem.html)。如果需要进一步对热门物品惩罚，可以继续修改公式为**如图3**所示，通过调节参数 α，α 越大，惩罚力度越大，热门物品的相似度越低，整体结果的平均热门程度越低。
+### 对热门物品进一步惩罚
+如果 item-j 极度热门，上面的算法还是不够的。举个例子，《Harry Potter》非常火，买任何一本书的人都会购买它，即使通过图2的方法对它进行了惩罚，但是《Harry Potter》仍然会获得很高的相似度。这就是推荐系统领域著名的 [Harry Potter Problem](http://nkparimi.blogspot.jp/2010/01/harry-potter-problem.html)。如果需要进一步对热门物品惩罚，可以继续修改公式为如**图3**所示，通过调节参数 α，α 越大，惩罚力度越大，热门物品的相似度越低，整体结果的平均热门程度越低。
 
+### 对活跃用户惩罚
 同样的，Item-based CF 也需要考虑活跃用户（即一个活跃用户（专门做刷单）可能买了非常多的物品）的影响，活跃用户对物品相似度的贡献应该小于不活跃用户。**图4**为集合了该权重的算法。
 
 # Comparison
