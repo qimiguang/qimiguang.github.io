@@ -20,7 +20,7 @@ tags:
 ## Logistic Regression
 Classification Problem 不可以用 Linear Regression（线性回归算法）来解决，需要用 Logistic Regression（逻辑回归算法，名称中的regression是由于历史原因导致的，请无视）。
 
-逻辑函数（Logistic function）也叫S型函数（Sigmoid function）。
+逻辑函数（Logistic function）也叫<span style="color:red"> S 型函数（Sigmoid function）</span>。
 
 当输出值是**2个**时，h(x)的的输出表示结果为1的可能性，当h(x) >= 0.5,则预测y = 1，否则y ＝ 0：
 ![](/assets/images/ml/hxtoy.jpeg)
