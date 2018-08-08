@@ -1,5 +1,5 @@
 ---
-title: 分布式存储系统：Replication 细节
+title: 分布式存储：Replication 细节
 date: 2018-03-2 10:15:00
 tags:
 - distributed storage
