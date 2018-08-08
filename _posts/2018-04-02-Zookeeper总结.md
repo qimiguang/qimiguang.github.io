@@ -498,19 +498,3 @@ master 要 watch slaves 创建的临时 /slaves 的状态。如果 slave crash�
 ![Eureka 2.0 Architecture Overview](https://github.com/Netflix/eureka/wiki/Eureka-2.0-Architecture-Overview)
 
 
-
-
-# todo
-zookeeper vs etcd
-zookeeper vs consul
-zookeeper vs eureka
-
-
-
-kafka consumer 消费消息是 poll 模型，why？ poll 也维护心跳，发 heartbeat 到 zk
-zk cluster 备份数据到 zk follower 是 push(ZAB)。  数据改动后，push notification 到 consumer/client， client 定期发 heartbeat 到 zk
-
-distributed counters
-partial updates
-atomic broadcast
-sequential number 的实现原理
