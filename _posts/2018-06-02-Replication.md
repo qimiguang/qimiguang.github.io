@@ -1,6 +1,6 @@
 ---
 title: 分布式存储：Replication 细节
-date: 2018-03-2 10:15:00
+date: 2018-06-02 10:15:00
 tags:
 - distributed storage
 - replication
@@ -330,7 +330,8 @@ Amazon Dynamo 用了数据版本的设计，就像“乐观锁”一样，但是
 
 
 # references
-十分推荐：[Distributed systems for fun and profit](http://book.mixu.net/distsys/)
+十分推荐：
+[Distributed systems for fun and profit](http://book.mixu.net/distsys/)
 
 [An introduction to distributed systems](https://github.com/aphyr/distsys-class)
 [A Note on Distributed Computing](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628)
@@ -369,25 +370,25 @@ clock:
 [Bully algorithm by Wikipedia](https://en.wikipedia.org/wiki/Bully_algorithm)
 
 # 知识点
-FLP
-CAP
-Paxos
-Two Generals problems
-Byzantine Generals problems
-Gossip protocols
-Consensus protocols
-Back Pressure
-Bully algorithm(Leader election)
+* FLP
+* CAP
+* Paxos
+* Two Generals problems
+* Byzantine Generals problems
+* Gossip protocols
+* Consensus protocols
+* Back Pressure
+* Bully algorithm(Leader election)
 
 
 # 分布式系统实现
-Dynamo
-Cassandra
-GFS
-Spanner
-Chubby
-BigTable
-Zookeeper
-Redis
-RabbitMQ
+* Dynamo
+* Cassandra
+* GFS
+* Spanner
+* Chubby
+* BigTable
+* Zookeeper
+* Redis
+* RabbitMQ
 

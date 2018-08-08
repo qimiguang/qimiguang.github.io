@@ -1,6 +1,6 @@
 ---
 title: 分布式存储：Partition 细节
-date: 2018-03-20 19:25:00
+date: 2018-06-20 19:25:00
 tags:
 - distributed storage
 - partition
