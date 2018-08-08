@@ -7,14 +7,9 @@ tags:
 ---
 
 
-> 本文参考自：《ZooKeeper: Distributed process coordination》
-
-# Zookeeper 简介
+> 本文部分参考自：《ZooKeeper: Distributed process coordination》
 > Apache ZooKeeper, a distributed coordination service for distributed systems. 
-
-Zookeeper 最初是由 Yahoo 公司开发的，主要用于支持 robust distributed system，后期贡献给了 Apache 基金会。
-
-不像单体应用，在分布式系统中各个节点间的 Coordinating 是困难的。Zookeeper 正是为了解决分布式系统的**协调工作(coordinating task)**，它通过提供通用的功能，让 application developers 能专注于自身的业务功能，而不用过多的关注分布式系统的协调。 
+Zookeeper 最初是由 Yahoo 公司开发的，主要用于支持 robust distributed system，后期贡献给了 Apache 基金会。不像单体应用，在分布式系统中各个节点间的 Coordinating 是困难的。Zookeeper 正是为了解决分布式系统的**协调工作(coordinating task)**，它通过提供通用的功能，让 application developers 能专注于自身的业务功能，而不用过多的关注分布式系统的协调。 
 
 Zookeeper 名字的来源也非常的有趣且到位。分布式系统可以比做 zoo，里面有各种各样不同的应用(animals)，而 zookeeper 的目的就是保证各个应用间的可控和有序。
 
