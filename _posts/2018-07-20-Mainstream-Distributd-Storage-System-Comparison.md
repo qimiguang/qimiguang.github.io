@@ -267,10 +267,10 @@ Redis 中 roles 有:
 > slave 向 master 发起: psync masterRunId offset
 
 触发场景：
-1. 当主从复制过程中如果出现网络闪断等原因，超过 repl-timeout 没连上。这段时间 master 正常接受写请求，并记录在**复制积压缓冲区（默认最大 1MB）**。
-2. 网络恢复后，slave 主动向 master 要求补发丢失数据，带上自己已复制完的最大的 offset。
-3. master 检查 offset 之后的数据是否在自己的复制积压缓冲区，如果在，则执行部分复制。
-4. 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
+* 当主从复制过程中如果出现网络闪断等原因，超过 repl-timeout 没连上。这段时间 master 正常接受写请求，并记录在**复制积压缓冲区（默认最大 1MB）**。
+* 网络恢复后，slave 主动向 master 要求补发丢失数据，带上自己已复制完的最大的 offset。
+* master 检查 offset 之后的数据是否在自己的复制积压缓冲区，如果在，则执行部分复制。
+* 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
 
 ### 异步复制(Async)
