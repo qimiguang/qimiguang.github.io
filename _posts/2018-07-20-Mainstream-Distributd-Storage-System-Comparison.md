@@ -272,6 +272,7 @@ Redis 中 roles 有:
 3. master 检查 offset 之后的数据是否在自己的复制积压缓冲区，如果在，则执行部分复制。
 4. 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
+
 ### 异步复制(Async)
 > redis 没有同步复制 
 
@@ -285,13 +286,16 @@ Redis 中 roles 有:
 
 Redis 通过 redis sentinel 自动完成对 redis master & redis slave & redis sentinel 的 fault discovery(故障发现) & failover(故障转移)。
 
+
 ### Redis
 * sentinel 会每隔 1s 向 redis master & slaves & other sentinels 发送 ping 命令来维持 heartbeat
 * 若 timeout 后 master 没响应，则认为 master **主观下线**
 * 发现 master 不可用的 sentinel 和别的 sentinels 交互，当 quorum 个 sentinels 都认为 master 不可用时，标记 master **客观下线**（防止误判）
 
+
 ### Redis Sentinel
 * 每个 sentinel 除了定期 ping redis master & slaves 外，还定期 ping 其他 sentinels，来检查其他 sentinels 是否正常。
+
 
 ### Quorum
 quorum 的作用：
@@ -300,8 +304,10 @@ quorum 的作用：
 
 
 ## Leader Election
+
 ### Sentinel
 Sentinel 使用 **Raft** 算法来进行 sentinel cluster 的 leader election。
+
 
 ### Redis
 * 故障转移的工作只需要一个 sentinel 就可以完成，所以会先选举出一个 sentinel leader
