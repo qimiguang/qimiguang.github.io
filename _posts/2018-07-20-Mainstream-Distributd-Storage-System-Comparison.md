@@ -246,8 +246,6 @@ Redis 中 roles 有:
 * 异步复制
 
 ### 全量复制(Full Resync)
-> slave 向 master 发起: psync masterRunId -1
-
 触发场景：
 * slave 第一次 slaveof master 时
 * slave 与 master 的数据差距过大到无法使用**复制积压缓冲区**中的 backlog 时
@@ -263,6 +261,8 @@ Redis 中 roles 有:
 
 所以，除了在 slave 第一次连接上 master 时使用全量复制，其他时候都建议使用部分复制。
 
+> slave 向 master 发起: psync masterRunId -1
+
 ### 部分复制(Partial Resync)
 > slave 向 master 发起: psync masterRunId offset
 
@@ -272,7 +272,7 @@ Redis 中 roles 有:
 * master 检查 offset 之后的数据是否在自己的复制积压缓冲区，如果在，则执行部分复制。
 * 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
-
+> slave 向 master 发起: psync masterRunId offset
 ### 异步复制(Async)
 > redis 没有同步复制 
 
