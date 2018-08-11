@@ -226,15 +226,6 @@ Zookeeper 不涉及到 Partition。
 2. app 创建一个有序的节点 /node/node-，ZooKeeper 在这个 znode 节点上自动添加一个序列号，成为 /node/node-xxx，其中 xxx 为序列号。当 master 宕机时，可以使用这个序列号来确定哪个 app 成为新的 master。
 3. 第 2 步也可以变成简单的所有 slaves 抢占 /master node。Kafka 就是这么做的。
 
-
-
-
-
-
-
-
-
-
 # Redis
 ## Node Role
 Redis 中 roles 有:
@@ -333,11 +324,6 @@ Redis partition 是通过 redis cluster 实现的，这块目前暂时没有足�
 
 
 
-
-
-
-
-
 # Kafka
 ## Node Role
 Kafka 与 Zookeeper, Redis 的一个不同点在于，Kafka 需要对以下组件进行角色划分:
@@ -419,7 +405,7 @@ ISR 收到消息 & 写入 log(replicated) 后回复 leader ack，如果某个消
 > Follower 是定期批量的从 leader fetch message，这样极大的提高复制性能（批量写磁盘）。
 > 当 producer 设置 acks = 0, 1 时，producer 收到的 success response 不代表 message committed。
 
-![](../../mq/kafka//assets/images/distributed-storage/HighWater-&-LogEndOffset.jpg)
+![](/assets/images/distributed-storage/HighWater-&-LogEndOffset.jpg)
 
  
 ## Failure Discovery
