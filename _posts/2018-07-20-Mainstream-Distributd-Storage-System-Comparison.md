@@ -274,7 +274,6 @@ Redis 中 roles 有:
 * master 检查 offset 之后的数据是否在自己的复制积压缓冲区，如果在，则执行部分复制。
 * 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
-### Async
 触发场景：主从服务架构稳定后，master 执行完写请求后，异步发送给 slaves
 redis 是完全的异步复制机制。
 
