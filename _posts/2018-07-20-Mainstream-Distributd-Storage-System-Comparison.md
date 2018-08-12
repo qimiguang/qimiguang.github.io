@@ -275,9 +275,7 @@ Redis 中 roles 有:
 * 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
 ### Async
-触发场景：
-* **主从服务架构稳定后**，master 执行完写请求后，异步发送给 slaves
-
+触发场景：主从服务架构稳定后，master 执行完写请求后，异步发送给 slaves
 redis 是完全的异步复制机制。
 
 ## Failure Discovery
@@ -320,7 +318,7 @@ Sentinel 使用 **Raft** 算法来进行 sentinel cluster 的 leader election。
 * 将新的 master 通知所有的 redis servers & redis clients
 * redis slaves follow 新的 master
 * 原 master 恢复后，follow 新的 master
-* * sentinel 通知 redis client 更新本地的 master & slaves 配置信息
+* sentinel 通知 redis client 更新本地的 master & slaves 配置信息
 
 
 ## Partition
