@@ -1,5 +1,5 @@
 ---
-title: Comparison of mainstream distributed storage systems: Redis vs Elasticsearch
+title: Comparison of mainstream distributed storage systems-Redis vs Elasticsearch
 date: 2018-08-01 20:10:00
 tags:
 - distributed system

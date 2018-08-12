@@ -1,5 +1,5 @@
 ---
-title: Comparison of mainstream distributed storage systems: Zookeeper vs Kafka
+title: Comparison of mainstream distributed storage systems-Zookeeper vs Kafka
 date: 2018-07-20 20:10:00
 tags:
 - distributed system
