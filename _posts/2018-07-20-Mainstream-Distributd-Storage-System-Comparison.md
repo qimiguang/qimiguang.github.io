@@ -241,11 +241,13 @@ Redis 中 roles 有:
 > master-slave async replication，master 写成功后直接返回 client success，不会等待 slaves ack。如果 slaves  network fault/ crash/ latency 等原因，master 会继续接受 write，可能造成**数据不一致性**问题。
 
 复制数据分为：
-* 全量复制
-* 部分复制
+* 全量复制(Full Resync)
+* 部分复制(Partial Resync)
 * 异步复制
 
-### 全量复制(Full Resync)
+### Full Resync
+> slave 向 master 发起: psync masterRunId -1
+
 触发场景：
 * slave 第一次 slaveof master 时
 * slave 与 master 的数据差距过大到无法使用**复制积压缓冲区**中的 backlog 时
@@ -263,7 +265,7 @@ Redis 中 roles 有:
 
 > slave 向 master 发起: psync masterRunId -1
 
-### 部分复制(Partial Resync)
+### Partial Resync
 > slave 向 master 发起: psync masterRunId offset
 
 触发场景：
@@ -272,15 +274,14 @@ Redis 中 roles 有:
 * master 检查 offset 之后的数据是否在自己的复制积压缓冲区，如果在，则执行部分复制。
 * 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
-> slave 向 master 发起: psync masterRunId offset
-### 异步复制(Async)
+### Async
 > redis 没有同步复制 
 
 触发场景：
-* **主从服务架构稳定后**，master 执行完写请求后，异步发送给 slaves
+* 主从服务稳定后，master 执行完写请求后，异步发送给 slaves
 
 ## Failure Discovery
-> 谈到 redis 的 Failure discovery & leader election，需要关注两个组件：
+谈到 redis 的 Failure discovery & leader election，需要关注两个组件：
 * redis master/slaves 节点本身
 * redis sentinel cluster
 
