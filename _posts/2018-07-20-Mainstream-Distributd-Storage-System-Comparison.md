@@ -275,10 +275,10 @@ Redis 中 roles 有:
 * 如果该区域没有 slave 请求的 offset，则部分复制退化为全量复制。
 
 ### Async
-> redis 没有同步复制 
-
 触发场景：
-* 主从服务稳定后，master 执行完写请求后，异步发送给 slaves
+* **主从服务架构稳定后**，master 执行完写请求后，异步发送给 slaves
+
+redis 是完全的异步复制机制。
 
 ## Failure Discovery
 谈到 redis 的 Failure discovery & leader election，需要关注两个组件：
