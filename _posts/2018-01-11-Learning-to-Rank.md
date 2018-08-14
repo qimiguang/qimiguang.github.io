@@ -1,5 +1,5 @@
 ---
-title: Learning to Rank
+title: Learning to Rank 笔记
 date: 2018-01-11 09:15:00
 tags:
 - search
