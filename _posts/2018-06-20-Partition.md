@@ -8,7 +8,6 @@ tags:
 
 # Partition
 分片是指将大的数据集按一定规则拆分成小的数据集，来降低数据量增长过大时带来的问题。方式大体来说有两种：哈希分布 & 顺序分布。很多时候要根据具体业务选择分片方式。
-
 Partition 的好处:     
 1. **improves performance(write)**: by limiting the amount of data to be examined and by locating related data in the same partition
 2. **improves availability**: by allowing partitions to **fail independently**, increasing the number of nodes that need to fail before availability is sacrificed

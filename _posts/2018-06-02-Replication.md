@@ -10,11 +10,9 @@ tags:
 > distributed application system & distributed storage system 为了解决相似的问题：
 1. Performance 
 2. Availability (and fault tolerance) 
-
 提出相似的解决方案:
 * 拆微服务  =  数据分片(partitioning)
 * 服务冗余  =  数据备份(replication)
-
 反过来，replication 会产生一致性问题，而一致性问题会影响性能 & 可用性：
 > strong consistency = great performance
 > weak/eventual consistency = poor performance 
